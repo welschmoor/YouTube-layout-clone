@@ -12,22 +12,25 @@ html {
 
 .maindiv-grid {
     display: grid;
-    grid-template-columns: 60px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 80px 1fr 1fr 1fr 1fr;
     grid-template-rows: 60px 100vh;
 }
 
 
 
 .grid-child {
-    padding: 20px;
+
 }
 
 .grid-child1 {
-    background-color: rgb(68, 68, 129);
+    background-color: rgb(40, 40, 46);
     grid-column: 1/ -1;
+
 }
 .grid-child2 {
-    background-color: rgb(186, 186, 245);
+    background-color: rgb(40, 40, 46);
+    display: flex;
+    justify-content: center;
 }
 .grid-child3 {
     background-color: rgb(112, 112, 146);
@@ -45,12 +48,46 @@ html {
 
 
 /*
-        SIDEBAR
+            SIDEBAR
 */
 
 .sidebar-ul {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 34px;
     list-style: none;
+    margin-top: 14px;
+}
+
+.icon {
+    font-size: 30px;
+    color: rgb(238, 238, 238);
+}
+
+.icontext {
+    font-size: 15px;
+    color: rgb(238, 238, 238);
+}
+
+
+.sidebar-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/*
+            HEADER
+*/
+.header {
+    display: flex;
+    align-items: center;
+    color: rgb(238, 238, 238);
+}
+
+.btn-hamburger {
+    background-color: rgb(40, 40, 46);
+    border: none
 }
