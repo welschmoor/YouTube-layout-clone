@@ -5,15 +5,12 @@ import styled from "styled-components"
 import { IoMenu, IoNotificationsOutline, IoAppsOutline, IoSettingsOutline, IoSearch, IoMic  } from "react-icons/io5"
 import MobileSidebar from "./MobileSidebar"
 
-const Header = () => {
-    const [sideBarOpen, SetSideBarOpen] = useState(false)
+const Header = ({ hamburgerClick}) => {
 
 
 
-    const hamburgerClick = () => {
-        console.log("clicked")
-        SetSideBarOpen(p=>!p)
-    }
+
+  
 
     return(
         <Wrapper >
@@ -31,7 +28,7 @@ const Header = () => {
                     <IconApps></IconApps>
                     <IconSettings ></IconSettings>
             </IconWrapper>
-            <MobileSidebar  sideBarOpen={sideBarOpen} />
+           
         </Wrapper>
     )
 }
@@ -55,11 +52,11 @@ const Wrapper = styled.header`
     justify-content: space-between;
 
 `
-const Logo = styled.h2`
+export const Logo = styled.h2`
     font-size: 1.2rem;
     font-weight: 400;
 `
-const LogoWrapper = styled.div`
+export const LogoWrapper = styled.div`
     display: flex;
     gap: 20px;
 
@@ -118,7 +115,7 @@ const IconWrapper = styled.div`
     gap: 20px;
 `
 
-const Hamburger = styled(IoMenu)`
+export const Hamburger = styled(IoMenu)`
     font-size: 1.3rem;
     cursor: pointer;
     min-width: 1.3rem;

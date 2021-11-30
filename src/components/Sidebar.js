@@ -64,8 +64,8 @@ const NavLI = styled.li`
 /////////////////////////////////////////
 //      ICONS
 
-const IconHome = styled(IoHome)``
-const IconFavorites = styled(IoBookmarks)``
+export const IconHome = styled(IoHome)``
+export const IconFavorites = styled(IoBookmarks)``
 
 
 

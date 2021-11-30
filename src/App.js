@@ -1,9 +1,9 @@
-
+import React, {useState} from "react"
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import Header from "./components/Header"
 import Sidebar from "./components/Sidebar"
 import MainContent from "./components/MainContent"
-
+import MobileSidebar from "./components/MobileSidebar";
 
 
 const GlobalStyle = createGlobalStyle`
@@ -56,17 +56,24 @@ const darkTheme = {
 
 
 function App() {
+  const [sideBarOpen, SetSideBarOpen] = useState(false)
+
+  const hamburgerClick = () => {
+    console.log("clicked")
+    SetSideBarOpen(p=>!p)
+}
   return (
     <ThemeProvider theme={ darkTheme } >
       <GlobalStyle />
       <Wrapper > 
-      <Header />
+      <Header hamburgerClick={hamburgerClick} />
       <Main >
         <Sidebar />
       <MainContent />
       </Main>
         
       </Wrapper >
+      <MobileSidebar  sideBarOpen={sideBarOpen} hamburgerClick={hamburgerClick}/>
   </ThemeProvider>
   );
 }
