@@ -60,7 +60,7 @@ export const LogoWrapper = styled.div`
     display: flex;
     gap: 20px;
 
-    margin-left: 27px;
+    margin-left: ${p=>p.theme.leftSideMargin};
 `
 
 ////////////////////////////////////
