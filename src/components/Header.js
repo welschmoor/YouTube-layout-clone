@@ -119,7 +119,7 @@ export const Hamburger = styled(IoMenu)`
     font-size: 1.3rem;
     cursor: pointer;
     min-width: 1.3rem;
-    z-index: 10;
+    z-index: 11;
 `
 
 const IconNotifications = styled(IoNotificationsOutline)`
