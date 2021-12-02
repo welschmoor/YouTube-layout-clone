@@ -11,11 +11,10 @@ import { IconFavorites, IconHome} from "./Sidebar"
 const MobileSidebar = ( {sideBarOpen, hamburgerClick} ) => {
   
 
-
   //{ sideBarOpen ? <ModalPlane /> : null }
   return( 
     < >
-   { sideBarOpen ? <SidebarPlane /> : null }
+   { sideBarOpen ? <SidebarPlane onClick={hamburgerClick} /> : null }
   <MobileWrapper style={{ "left": sideBarOpen? "0" : "-100%" }}>
     <LogoWrapper>
       <Hamburger onClick={hamburgerClick} />
